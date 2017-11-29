@@ -6,7 +6,7 @@ export default Ember.Controller.extend({
             event.preventDefault();
             let keywords = this.get('keywords');
             let location = this.get('location');
-            this.transitionToRoute({ queryParams: { searchKeywords: keywords, searchLocation: location }});
+            this.transitionToRoute('search', { queryParams: { keywords, location }});
         },
     }
 });
