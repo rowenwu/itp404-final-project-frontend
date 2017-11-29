@@ -1,4 +1,5 @@
-	1. Millennials
+[![Build Status](https://travis-ci.org/rowenwu/itp404-final-project-frontend.svg?branch=master)](https://travis-ci.org/rowenwu/itp404-final-project-frontend)
+1. Millennials
 	2. On Yelp, you can only save places to your own account, but oftentimes, you want to share places with friends.  Sharing pages from yelp individually is tedious, and there's no easy way to aggregate the places you've shared, so it's easy to forget about them. Then, plans fall through, or when you actually start planning to go, you have to go back and look for the places again
 	3. Client-side routes: search, saved, plans
 	Use the Yelp API, and store a shared group's locations in the loopback API
