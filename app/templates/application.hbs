@@ -29,12 +29,23 @@
         {{/link-to}}
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="text" placeholder="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
   </div>
 </nav>
 
+<form onsubmit={{action "searchYelp"}}>
+  <div class="form-group row">
 
+    <div class="col-md-3 col-sm-offset-3">
+      {{input type="text"  class="form-control" value=keywords id="search-keywords" placeholder="Surprise me"}}
+
+    </div>
+        <div class="col-md-3">
+
+          {{input type="text"  class="form-control" value=location id="search-location" placeholder="Anywhere"}}
+    </div>
+
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="search-button">Search</button>
+
+  </div>
+</form>
 {{outlet}}

@@ -1,15 +1,13 @@
-<form onsubmit={{action "searchYelp"}}>
-  <div class="form-group row">
-    <div class="col-sm-6 col-sm-offset-3">
-      {{input type="text"  class="form-control" value=keywords id="search-input" placeholder="Search"}}
-    </div>
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="search-button">Search</button>
 
-  </div>
-</form>
 
+<div class="col-md-3 col-sm-offset-1">
 
 <div class="list-group">
+  {{#each sortedEvents as |eventfulEvent|}}
+  {{eventful-event class="event" event=eventfulEvent}}
+{{/each}}
+
+{{outlet}}
   <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
     <div class="d-flex w-100 justify-content-between">
       <h5 class="mb-1">List group item heading</h5>
@@ -34,4 +32,6 @@
     <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
     <small class="text-muted">Donec id elit non mi porta.</small>
   </a>
+</div>
+
 </div>
