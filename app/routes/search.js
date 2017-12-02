@@ -15,7 +15,7 @@ export default Ember.Route.extend({
   model(params) {
     if(params.location != null){
 
-      $.ajax({
+    return $.ajax({
         type: 'GET',
         url: 'https://api.foursquare.com/v2/venues/explore',
         data: {

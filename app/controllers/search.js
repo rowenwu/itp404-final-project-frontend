@@ -1,16 +1,12 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+  // sortedLocations: Ember.computed('model', function() {
+  //   let locations = this.get('model');
 
-  // actions: {
-  //     searchYelp(event) {
-  //       event.preventDefault();
-  //       let keywords = this.get('keywords');
-  //       let location = this.get('location');
+  //   console.log("here");
+  //   console.log(locations);
 
-     
-  //       this.transitionToRoute({ queryParams: { keywords, location }});
-  //       return promise;
-  //     },
-  //   }
+  //   return locations;
+  // })  
 });
