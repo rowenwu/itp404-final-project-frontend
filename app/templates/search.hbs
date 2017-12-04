@@ -2,12 +2,12 @@
   <div class="col-md-5">
     <div class="list-group">
       {{#each model as |locationResult index|}}
-          {{single-location class="location" location=locationResult index=index}}
+          {{single-location class="location" location=locationResult index=index onclick=(action "selected")}}
       {{/each}}
     </div>
   </div>
 
-  <div class="col-md-7 p-1">
+  <div class="col-md-7 p-1 sticky-top" >
     {{g-maps name="my-map" lat=lat lng=lng zoom=zoom markers=markers}}
 
   </div>

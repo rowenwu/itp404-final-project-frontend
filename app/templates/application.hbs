@@ -1,44 +1,57 @@
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-  </head>
 
 
-<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-    {{#link-to "application" class="navbar-brand"}}
-    <h1> Let's Go </h1>
-    {{/link-to}}
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item ">
-        {{#link-to "saved" class="nav-link"}}
-          <h4> Saved Plans </h4>
-        {{/link-to}}
-      </li>
-    </ul>
-  </div>
-</nav>
+<div class='navbar navbar-fixed-top'>
+  <nav class='navbar-inner header'>
+    {{!-- <div class='container'> --}}
+      <div class='navbar-brand'>
+          {{#link-to "application" class="brand"}}
+            LET'S GO <i class="fa fa-cloud" style="text-shadow: 1px 1px white, -1px -1px #666;"></i>
+          {{/link-to}}
+      </div>
+      <ul class='nav pull-right'>
+        <li>
+          <a class='nav-link'>
+            {{#link-to "application"}}
+              START PLANNING
+             {{/link-to}}
+
+          </a>
+        </li>
+        <li>
+          <a class='nav-link'>
+            {{#link-to "saved"}}
+              SAVED PLANS 
+            {{/link-to}}
+          </a>
+        </li>
+        <li>
+          <a class='nav-link'>
+            FAVORITES
+          </a>
+        </li>
+       
+      </ul>
+    {{!-- </div> --}}
+  </nav>
+  <br>
+</div>
+
+
+<div class="container w-100 h-100">
+  <h4 class="text-center" > Start planning your next adventure.</h4>
+</div>
 
 <form onsubmit={{action "searchYelp"}}>
   <div class="mt-5 form-group row">
 
     <div class="col-md-3 col-sm-offset-3">
-      {{input type="text"  class="form-control" value=keywords id="search-keywords" placeholder="Surprise me"}}
-
+      {{input type="text"  class="form-control" value=keywords id="search-keywords" placeholder="Got an idea?"}}
     </div>
-        <div class="col-md-3">
-
-          {{input type="text"  class="form-control" value=location id="search-location" placeholder="Anywhere"}}
+    near
+    <div class="col-md-3">
+      {{input type="text"  class="form-control" value=location id="search-location" placeholder="Where do you want to go?"}}
     </div>
-
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="search-button">Search</button>
+    <button class="btn btn-outline-primary my-2 my-sm-0" type="submit" id="search-button">Search</button>
 
   </div>
 </form>
