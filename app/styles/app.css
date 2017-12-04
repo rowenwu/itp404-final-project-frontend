@@ -9,8 +9,9 @@ html {
   
 .ember-cli-g-map {
 	height: 600px;
-	position: sticky;
-}
+    position: -webkit-sticky;  
+    position: sticky;
+    top: 0;
 
 .container {
 	width: 200px;

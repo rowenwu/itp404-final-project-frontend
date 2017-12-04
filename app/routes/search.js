@@ -39,11 +39,26 @@ export default Ember.Route.extend({
   },
   setupController: function(controller, model) {
     this._super(controller, model);
-    
+    let markers = [];
+    for(var i = 0; i < model.length; i++){
+      markers.push({
+        id: i,  // Recommended
+        lat: model[i].venue.location.lat, // Required
+        lng: model[i].venue.location.lng,     //Required
+        infoWindow: {
+          content: model[i].venue.name,
+          visible: true
+        },
+        click(event, marker) {},
+        mouseover(event, marker) {},
+      })
+    }
     controller.setProperties({ 
+      model: model,
       lat: model[0].venue.location.lat,
       lng: model[0].venue.location.lng,
-      zoom: 12
+      zoom: 11,
+      markers: markers
     });
   }
 });
