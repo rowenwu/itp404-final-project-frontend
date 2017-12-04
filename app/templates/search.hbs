@@ -1,29 +1,14 @@
 <div class="m-5">
-  <div class="col-md-5 col-sm-offset-1">
-
+  <div class="col-md-5">
     <div class="list-group">
-      {{#each model as |location|}}
-        {{!-- {{eventful-event class="event" event=eventfulEvent}} --}}
-
-        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-          <div class="d-flex w-100 justify-content-between">
-            <h4 class="mb-1">{{location.venue.name}}</h4>
-            {{location.venue.rating}}
-          </div>
-          <div>{{location.venue.categories.[0].name}}</div>
-          <div>{{location.venue.hours.status}}</div>
-          <p class="mb-1">{{location.venue.location.formattedAddress.[0]}}, 
-            {{location.venue.location.formattedAddress.[1]}} </p>
-            
-          {{!-- <p class="mb-1">Tip: {{location.tips.[0].text</p> --}}
-
-          <a href={{location.venue.url}}>Website</a>
-
-        </a>
+      {{#each model as |locationResult index|}}
+          {{single-location class="location" location=locationResult index=index}}
       {{/each}}
     </div>
+  </div>
 
-
+  <div class="col-md-7 p-1">
+    {{g-maps name="my-map" lat=lat lng=lng zoom=zoom}}
   </div>
 </div>
 

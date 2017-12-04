@@ -2,8 +2,7 @@ import Ember from 'ember';
 import $ from 'jquery';
 
 export default Ember.Route.extend({
-  // ajax: Ember.inject.service(),  
-  
+
   queryParams: {
     keywords: {
       refreshModel: true,
@@ -12,10 +11,11 @@ export default Ember.Route.extend({
       refreshModel: true,
     }
   },
+
   model(params) {
     if(params.location != null){
 
-    return $.ajax({
+      return $.ajax({
         type: 'GET',
         url: 'https://api.foursquare.com/v2/venues/explore',
         data: {
@@ -31,10 +31,19 @@ export default Ember.Route.extend({
             
         }
       }).then(function(result) {
-        console.log(result.response.groups[0].items);
+        // console.log(result.response.groups[0].items);
         return result.response.groups[0].items;
       });
 
-     }    
+    }    
+  },
+  setupController: function(controller, model) {
+    this._super(controller, model);
+    
+    controller.setProperties({ 
+      lat: model[0].venue.location.lat,
+      lng: model[0].venue.location.lng,
+      zoom: 12
+    });
   }
 });

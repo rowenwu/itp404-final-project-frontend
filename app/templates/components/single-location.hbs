@@ -1,0 +1,25 @@
+<div class="w-100 p-1">
+    <li class="list-group-item list-group-item-action flex-column align-items-start">
+
+        <div class="d-flex w-100 justify-content-between mb-0">
+            <h5> {{increment-number index}}. {{location.venue.name}}</h5>
+            <h5> {{location.venue.rating}}</h5>
+        </div>
+        <div class="d-flex w-100 justify-content-between mb-0">      
+            <div class="default-text">{{price-conversion location.venue.price.currency location.venue.price.tier}} -
+                {{location.venue.categories.[0].name}} 
+                </div>
+            <div class="default-text">{{location.venue.hours.status}} </div>
+            
+        </div>
+        <div class="d-flex w-100 justify-content-between">      
+            <p>{{location.venue.location.formattedAddress.[0]}}, <br />
+            {{location.venue.location.formattedAddress.[1]}} </p>
+            <a href={{location.venue.url}}>Website</a>
+
+        </div>
+        <p class="mb-1 small">Tip: {{location.tips.[0].text}}</p>
+
+    </li>
+
+</div>
