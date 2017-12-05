@@ -4,14 +4,14 @@
   <nav class='navbar-inner header'>
     {{!-- <div class='container'> --}}
       <div class='navbar-brand'>
-          {{#link-to "application" class="brand"}}
+          {{#link-to "home" class="brand"}}
             LET'S GO <i class="fa fa-cloud" style="text-shadow: 1px 1px white, -1px -1px #666;"></i>
           {{/link-to}}
       </div>
       <ul class='nav pull-right'>
         <li>
           <a class='nav-link'>
-            {{#link-to "application"}}
+            {{#link-to "home"}}
               HOME
              {{/link-to}}
 
@@ -37,33 +37,4 @@
 </div>
 
 
-<div class="container w-100 h-100 mt-40">
-  <h3 class="text-center mb-20" >Start planning your next adventure.</h3>
-  <p class="text-center mb-60" >Want to make plans, but don't know what to do? <br />
-    Let's Go will help you find things to do, map out your plans, and let you set a date with your friends.</p>
-</div>
-
-
-
-<form onsubmit={{action "searchYelp"}}>
-  <div class="d-flex justify-content-center mt-30">
-        {{bootstrap-datepicker-inline placeholder="Pick a date"
-        value=dateChosen todayBtn=true changeDate="changeDateAction" clearDate="clearDateAction"}}
-  </div>
-  <div class="d-flex justify-content-center">
-    <div class="text-center mb-1" >If you're not sure when, don't worry - you choose a date later.</div>
-  </div>
-  <div class="form-group row">
-    <div class="col-md-3 col-sm-offset-3">
-      {{input type="text"  class="form-control" value=keywords id="search-keywords" placeholder="What do you want to do?"}}
-
-    </div>
-    near
-    <div class="col-md-3">
-      {{input type="text"  class="form-control" value=location id="search-location" placeholder="Where do you want to go?"}}
-    </div>
-    <button class="btn btn-outline-primary my-2 my-sm-0" type="submit" id="search-button">Search</button>
-
-  </div>
-</form>
 {{outlet}}

@@ -7,9 +7,21 @@
     </div>
   </div>
 
-  <div class="col-md-7 p-1 sticky-top" >
-    {{g-maps name="my-map" lat=lat lng=lng zoom=zoom markers=markers}}
+  <div class="col-md-7 p-1" >
+    <div>
+      {{g-maps name="my-map" lat=lat lng=lng zoom=zoom markers=markers}}
+    </div>
+    <div class="d-flex flex-row-reverse mt-3" id="buttons">
+      <div class="m-2">
+        <button class="btn btn-success btn-lg" onclick={{action "savePlan"}} id="save-button">Save</button>
+      </div>
+      <div class="m-2">
+        {{!-- <button class="btn btn-primary btn-lg" onclick={{action "addLocation"}} id="add-button">Add Location</button> --}}
+      </div>
 
+      <div id="error-message"></div>
+
+    </div>
   </div>
 </div>
 

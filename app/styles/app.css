@@ -138,6 +138,14 @@
 		transform: translate(15px);
 	}
 }
+#buttons{
+	margin-left:2px;
+	padding-left:2px;
+}
+
+#description{
+	margin-bottom:20px;
+}
 
 *{
 	font-family: Futura, "Trebuchet MS", Arial, sans-serif;

@@ -2,6 +2,7 @@ import Ember from 'ember';
 import $ from 'jquery';
 
 export default Ember.Route.extend({
+  title: 'Create a plan',  
   queryParams: {
     keywords: {
       refreshModel: true,
@@ -9,7 +10,6 @@ export default Ember.Route.extend({
     location: {
       refreshModel: true,
     },
-    dateChosen
   },
   setupController: function(controller, model) {
     this._super(controller, model);

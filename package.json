@@ -28,6 +28,7 @@
     "ember-cli-bootstrap-css": "^0.1.1",
     "ember-cli-bootstrap-fonts": "^0.1.0",
     "ember-cli-dependency-checker": "^2.0.0",
+    "ember-cli-document-title": "^0.3.3",
     "ember-cli-eslint": "^4.0.0",
     "ember-cli-g-maps": "^0.5.14",
     "ember-cli-htmlbars": "^2.0.1",
@@ -42,6 +43,7 @@
     "ember-export-application-global": "^2.0.0",
     "ember-fetch": "^3.4.3",
     "ember-load-initializers": "^1.0.0",
+    "ember-moment": "^7.5.0",
     "ember-resolver": "^4.0.0",
     "ember-source": "~2.15.0",
     "ember-welcome-page": "^3.0.0",
@@ -50,5 +52,8 @@
   },
   "engines": {
     "node": "^4.5 || 6.* || >= 7.*"
+  },
+  "dependencies": {
+    "toastr": "^2.1.2"
   }
 }
