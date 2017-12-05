@@ -2,6 +2,15 @@ import Ember from 'ember';
 import $ from 'jquery';
 
 export default Ember.Route.extend({
+  queryParams: {
+    keywords: {
+      refreshModel: true,
+    },
+    location: {
+      refreshModel: true,
+    },
+    dateChosen
+  },
   setupController: function(controller, model) {
     this._super(controller, model);
     let markers = [];
@@ -28,15 +37,6 @@ export default Ember.Route.extend({
       markers: markers
     });
   },
-  queryParams: {
-    keywords: {
-      refreshModel: true,
-    },
-    location: {
-      refreshModel: true,
-    }
-  },
-
   model(params) {
     if(params.location != null){
 

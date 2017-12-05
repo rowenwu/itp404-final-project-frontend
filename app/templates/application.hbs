@@ -12,7 +12,7 @@
         <li>
           <a class='nav-link'>
             {{#link-to "application"}}
-              START PLANNING
+              HOME
              {{/link-to}}
 
           </a>
@@ -20,15 +20,15 @@
         <li>
           <a class='nav-link'>
             {{#link-to "saved"}}
-              SAVED PLANS 
+              SAVED 
             {{/link-to}}
           </a>
         </li>
-        <li>
+        {{!-- <li>
           <a class='nav-link'>
             FAVORITES
           </a>
-        </li>
+        </li> --}}
        
       </ul>
     {{!-- </div> --}}
@@ -37,15 +37,26 @@
 </div>
 
 
-<div class="container w-100 h-100">
-  <h4 class="text-center" > Start planning your next adventure.</h4>
+<div class="container w-100 h-100 mt-40">
+  <h3 class="text-center mb-20" >Start planning your next adventure.</h3>
+  <p class="text-center mb-60" >Want to make plans, but don't know what to do? <br />
+    Let's Go will help you find things to do, map out your plans, and let you set a date with your friends.</p>
 </div>
 
-<form onsubmit={{action "searchYelp"}}>
-  <div class="mt-5 form-group row">
 
+
+<form onsubmit={{action "searchYelp"}}>
+  <div class="d-flex justify-content-center mt-30">
+        {{bootstrap-datepicker-inline placeholder="Pick a date"
+        value=dateChosen todayBtn=true changeDate="changeDateAction" clearDate="clearDateAction"}}
+  </div>
+  <div class="d-flex justify-content-center">
+    <div class="text-center mb-1" >If you're not sure when, don't worry - you choose a date later.</div>
+  </div>
+  <div class="form-group row">
     <div class="col-md-3 col-sm-offset-3">
-      {{input type="text"  class="form-control" value=keywords id="search-keywords" placeholder="Got an idea?"}}
+      {{input type="text"  class="form-control" value=keywords id="search-keywords" placeholder="What do you want to do?"}}
+
     </div>
     near
     <div class="col-md-3">
