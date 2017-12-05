@@ -39,6 +39,7 @@ export default Ember.Route.extend({
   },
   model(params) {
     if(params.location != null){
+      console.log("here");
 
       return $.ajax({
         type: 'GET',
