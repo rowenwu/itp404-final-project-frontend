@@ -1,4 +1,4 @@
-<div class="m-5">
+<div class="container-large">
   <div class="col-md-5">
     <div class="list-group">
       {{#each model as |locationResult index|}}
@@ -16,7 +16,7 @@
         <button class="btn btn-success btn-lg" onclick={{action "savePlan"}} id="save-button">Save</button>
       </div>
       <div class="m-2">
-        {{!-- <button class="btn btn-primary btn-lg" onclick={{action "addLocation"}} id="add-button">Add Location</button> --}}
+        <button class="btn btn-primary btn-lg" onclick={{action "addLocation"}} id="add-button">Add Location</button>
       </div>
 
       <div id="error-message"></div>

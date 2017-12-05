@@ -14,7 +14,12 @@ export default Ember.Controller.extend({
             this.set('selectedPosition', position); 
         },
         addLocation(){
-
+            let selectedPosition = this.get('selectedPosition');   
+            let locations = this.get('locations');   
+            let model = this.get('model');
+            if(selectedPosition != -1){
+                locations.push(model[selectedPosition]);
+            }
         },
         savePlan(){
             let selectedPosition = this.get('selectedPosition');   
@@ -22,11 +27,7 @@ export default Ember.Controller.extend({
             let model = this.get('model');
             if(selectedPosition != -1){
                 locations.push(model[selectedPosition]);
-                this.get('plans').add(locations).then(() => {
-                    toastr.success('Plan saved');
-                }, () => {
-                    toastr.error('Plan failed to save') 
-                });
+                this.get('plans').add(locations);
                 this.transitionToRoute('saved');
                 
             }   

@@ -138,6 +138,9 @@
 		transform: translate(15px);
 	}
 }
+.container-large{
+	margin-top:100px;	
+}
 #buttons{
 	margin-left:2px;
 	padding-left:2px;

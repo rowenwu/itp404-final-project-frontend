@@ -15,10 +15,9 @@ export default Ember.Route.extend({
         });
       },
     model(params){
-        console.log(this.get('plans').get());
         return this.get('plans').get()
         .then(function(result) {
-            console.log(result);
+            // console.log(result);
             return result;
           });   
     }
